@@ -7,7 +7,7 @@ with open('_json/platform/argocd.json', 'r') as infile:
 gf_api_key = os.environ['GF_API_KEY']
 
 url = 'https://grafana.locmai.dev/api/dashboards/db'
-
+url = 'https://grafana.locmai.dev/render/dashboards/db'
 print(json_data)
 
 headers = {
@@ -21,3 +21,4 @@ r = requests.post(url, json={'dashboard': json_data}, headers=headers)
 print(r.status_code)
 
 print(r.content)
+

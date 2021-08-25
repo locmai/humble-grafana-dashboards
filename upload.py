@@ -1,7 +1,7 @@
 import requests, json, os
 
 json_data = {}
-with open(f"_json/platform/argocd.json", 'w') as infile:
+with open(f"_json/platform/argocd.json", 'r') as infile:
     json_data = json.load(infile)
 
 gf_api_key = os.environ['GF_API_KEY']

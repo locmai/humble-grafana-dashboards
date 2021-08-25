@@ -6,7 +6,7 @@ with open(f"_json/platform/argocd.json", 'r') as infile:
 
 gf_api_key = os.environ['GF_API_KEY']
 
-url = 'grafana.locmai.dev'
+url = 'https://grafana.locmai.dev'
 
 headers = {
     'Accept': 'application/json',

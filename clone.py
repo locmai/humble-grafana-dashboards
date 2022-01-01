@@ -1,7 +1,8 @@
 import requests, json
 
 clone_platform_dashboards = {
-    'argocd': 'https://raw.githubusercontent.com/argoproj/argo-cd/master/examples/dashboard.json'
+    'argocd': 'https://raw.githubusercontent.com/argoproj/argo-cd/master/examples/dashboard.json',
+    'nginx': 'https://github.com/kubernetes/ingress-nginx/blob/main/deploy/grafana/dashboards/nginx.json'
 }
 
 def clone_dashboards(layer_name:str, clone_dashboards: list):
@@ -11,7 +12,7 @@ def clone_dashboards(layer_name:str, clone_dashboards: list):
         if response.status_code != 200:
                 print('Skipping the file, response code %s not equals 200' % response.status_code)
                 continue
-
+        
         with open(f"_json/{layer_name}/{k}.json", 'w') as outfile:
             json.dump(response.json(), outfile)
 

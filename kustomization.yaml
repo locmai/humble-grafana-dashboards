@@ -11,6 +11,7 @@ configMapGenerator:
 - name: platform-dashboards
   files:
     - _json/platform/argocd.json
+    - _json/platform/nginx.json
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/platform"

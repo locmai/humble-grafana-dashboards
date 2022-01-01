@@ -12,6 +12,7 @@ configMapGenerator:
   files:
     - _json/platform/argocd.json
     - _json/platform/nginx.json
+    - _json/platform/loki-nginx.json
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/platform"

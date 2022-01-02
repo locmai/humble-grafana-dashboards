@@ -8,6 +8,7 @@ generatorOptions:
     grafana_dashboard: "1"
 
 configMapGenerator:
+
 - name: bootstrap-dashboards
   files:
     - _json/bootstrap/argocd.json
@@ -23,4 +24,11 @@ configMapGenerator:
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/system"
+- name: platform-dashboards
+  files:
+    - _json/platform/gitea.json
+    - _json/platform/authentik.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/platform"
     

@@ -3,7 +3,10 @@ import os
 import shutil
 
 
-clone_platform_dashboards = {}
+clone_platform_dashboards = {
+    'gitea': "https://grafana.com/api/dashboards/13192/revisions/1/download",
+    'authentik': "https://grafana.com/api/dashboards/14837/revisions/2/download",
+}
 
 clone_bootstrap_dashboards = {
     'argocd': 'https://raw.githubusercontent.com/argoproj/argo-cd/master/examples/dashboard.json',
@@ -35,6 +38,7 @@ def clone_dashboards(layer_name:str, clone_dashboards: list):
             json.dump(response.json(), outfile)
 
 shutil.rmtree('./_json')
+
 clone_dashboards('platform', clone_platform_dashboards)
 clone_dashboards('bootstrap', clone_bootstrap_dashboards)
 clone_dashboards('system', clone_system_dashboards)

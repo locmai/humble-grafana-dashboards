@@ -12,7 +12,8 @@ clone_bootstrap_dashboards = {
 clone_system_dashboards = {
     'nginx': 'https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/grafana/dashboards/nginx.json',
     'loki-nginx': 'https://grafana.com/api/dashboards/12559/revisions/11/download',
-    'jaeger': 'https://grafana.com/api/dashboards/10001/revisions/2/download', 
+    'jaeger': 'https://grafana.com/api/dashboards/10001/revisions/2/download',
+    'cert-manager': 'https://grafana.com/api/dashboards/11001/revisions/1/download',
 }
 
 

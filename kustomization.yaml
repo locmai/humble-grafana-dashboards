@@ -18,7 +18,7 @@ configMapGenerator:
   files:
     - _json/system/nginx.json
     - _json/system/loki-nginx.json
-    - _json/system/jaeger
+    - _json/system/jaeger.json
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/system"

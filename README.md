@@ -10,3 +10,8 @@ Downloaded dashboard from https://grafana.com/api/dashboards/12559/revisions/11/
 ## Pipelines
 
 TBD
+
+## TOOs
+
+- Consider moving these raw json into a bucket or something
+- Helm is better then kustomize?

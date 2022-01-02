@@ -8,11 +8,18 @@ generatorOptions:
     grafana_dashboard: "1"
 
 configMapGenerator:
-- name: platform-dashboards
+- name: bootstrap-dashboards
   files:
-    - _json/platform/argocd.json
-    - _json/platform/nginx.json
-    - _json/platform/loki-nginx.json
+    - _json/bootstrap/argocd.json
   options:
     annotations:
-      k8s-sidecar-target-directory: "/tmp/dashboards/platform"
+      k8s-sidecar-target-directory: "/tmp/dashboards/bootstrap"
+- name: system-dashboards
+  files:
+    - _json/system/nginx.json
+    - _json/system/loki-nginx.json
+    - _json/system/jaeger
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/system"
+    

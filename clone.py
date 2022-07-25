@@ -4,8 +4,8 @@ import shutil
 
 
 clone_platform_dashboards = {
-    'gitea': "https://grafana.com/api/dashboards/13192/revisions/1/download",
-    'authentik': "https://grafana.com/api/dashboards/14837/revisions/2/download",
+    'argo-workflow': "https://grafana.com/api/dashboards/13927/revisions/4/download",
+    'vault': "https://grafana.com/api/dashboards/12904/revisions/2/download"
 }
 
 clone_bootstrap_dashboards = {

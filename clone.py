@@ -4,7 +4,7 @@ import shutil
 
 
 clone_platform_dashboards = {
-    'argo-workflow': "https://grafana.com/api/dashboards/13927/revisions/4/download",
+    'argo-workflow': "https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/grafana-dashboard.json",
     'vault': "https://grafana.com/api/dashboards/12904/revisions/2/download"
 }
 

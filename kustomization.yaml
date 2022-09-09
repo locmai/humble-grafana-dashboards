@@ -31,11 +31,4 @@ configMapGenerator:
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/platform"
-
-- name: alvisio-dashboards
-  files:
-    - raw/alvisio.json
-  options:
-    annotations:
-      k8s-sidecar-target-directory: "/tmp/dashboards/alvisio"
     

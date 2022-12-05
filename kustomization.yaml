@@ -35,8 +35,6 @@ configMapGenerator:
   files:
     - _json/mimir/mimir-alertmanager-resources.json
     - _json/mimir/mimir-alertmanager.json
-    - _json/mimir/mimir-config.json
-    - _json/mimir/mimir-object-store.json
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/mimir"
@@ -86,6 +84,13 @@ configMapGenerator:
   files:
     - _json/mimir/mimir-compactor-resources.json
     - _json/mimir/mimir-compactor.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/mimir" 
+- name: mimir-5-dashboards
+  files:
+    - _json/mimir/mimir-config.json
+    - _json/mimir/mimir-object-store.json
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/mimir" 

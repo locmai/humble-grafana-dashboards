@@ -31,4 +31,57 @@ configMapGenerator:
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/platform"
+- name: mimir-0-dashboards
+  files:
+    - _json/mimir/mimir-alertmanager-resources.json
+    - _json/mimir/mimir-alertmanager.json
+    - _json/mimir/mimir-compactor-resources.json
+    - _json/mimir/mimir-compactor.json
+    - _json/mimir/mimir-config.json
+    - _json/mimir/mimir-object-store.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/mimir"
+- name: mimir-1-dashboards
+  files:
+    - _json/mimir/mimir-overrides.json
+    - _json/mimir/mimir-overview-networking.json
+    - _json/mimir/mimir-overview-resources.json
+    - _json/mimir/mimir-overview.json
+    - _json/mimir/mimir-queries.json
+    - _json/mimir/mimir-reads-networking.json
+    - _json/mimir/mimir-reads-resources.json
+    - _json/mimir/mimir-reads.json
+    - _json/mimir/mimir-writes-networking.json
+    - _json/mimir/mimir-writes-resources.json
+    - _json/mimir/mimir-writes.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/mimir"
+- name: mimir-2-dashboards
+  files:
+    - _json/mimir/mimir-remote-ruler-reads-resources.json
+    - _json/mimir/mimir-remote-ruler-reads.json
+    - _json/mimir/mimir-rollout-progress.json
+    - _json/mimir/mimir-ruler.json
+    - _json/mimir/mimir-scaling.json
+    - _json/mimir/mimir-slow-queries.json
+    - _json/mimir/mimir-tenants.json
+    - _json/mimir/mimir-top-tenants.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/mimir"
+- name: mimir-3-dashboards
+  files:
+    - _json/mimir/mimir-remote-ruler-reads-resources.json
+    - _json/mimir/mimir-remote-ruler-reads.json
+    - _json/mimir/mimir-rollout-progress.json
+    - _json/mimir/mimir-ruler.json
+    - _json/mimir/mimir-scaling.json
+    - _json/mimir/mimir-slow-queries.json
+    - _json/mimir/mimir-tenants.json
+    - _json/mimir/mimir-top-tenants.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/mimir"
     

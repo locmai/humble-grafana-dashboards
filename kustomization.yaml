@@ -24,6 +24,14 @@ configMapGenerator:
   options:
     annotations:
       k8s-sidecar-target-directory: "/tmp/dashboards/system"
+- name: cillium-dashboards
+  files:
+    - _json/system/cillium-metrics.json
+    - _json/system/cillium-operator.json
+    - _json/system/hubble.json
+  options:
+    annotations:
+      k8s-sidecar-target-directory: "/tmp/dashboards/system"
 - name: platform-dashboards
   files:
     - _json/platform/argo-workflow.json
